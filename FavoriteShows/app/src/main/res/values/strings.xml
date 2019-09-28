@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FavoriteShows</string>
+    <string name="nodata">No Data Available</string>
+    <string name="default_name">Preman</string>
+    <string name="date_default">Nov 19, 2020</string>
+    <string name="default_Description">Poster</string>
+</resources>
