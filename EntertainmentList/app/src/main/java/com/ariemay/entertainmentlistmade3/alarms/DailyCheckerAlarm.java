@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 
 import com.ariemay.entertainmentlistmade3.R;
 import com.ariemay.entertainmentlistmade3.views.MainActivity;
@@ -35,6 +36,8 @@ public class DailyCheckerAlarm extends BroadcastReceiver {
     private void showNotification(Context context) {
         String CHANNEL_ID = "Channel_1";
         String CHANNEL_NAME = "Catalogue Movie";
+
+        Log.d("DAILY NOTIF", "showNotification: should shown");
 
         Intent intent = new Intent(context, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);

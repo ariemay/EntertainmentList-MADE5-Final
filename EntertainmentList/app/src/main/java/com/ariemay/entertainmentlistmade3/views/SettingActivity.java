@@ -1,8 +1,10 @@
 package com.ariemay.entertainmentlistmade3.views;
 
 import android.content.SharedPreferences;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -42,10 +44,6 @@ public class SettingActivity extends AppCompatActivity implements CompoundButton
         newMoviePref = getSharedPreferences(RELEASE, MODE_PRIVATE);
         upcomingCheck.setChecked(newMoviePref.getBoolean(RELEASE, false));
 
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-        }
     }
 
 
@@ -70,7 +68,7 @@ public class SettingActivity extends AppCompatActivity implements CompoundButton
             case (R.id.upcoming_setting):
                 if (b) {
                     String time = "08:00";
-                    newMoviesAlarm.setReleaseAlarm(getApplicationContext(), time);
+                    newMoviesAlarm.setDailyNewMovieAlarm(getApplicationContext(), time);
                     SharedPreferences.Editor editor = getSharedPreferences(RELEASE, MODE_PRIVATE).edit();
                     editor.putBoolean(RELEASE, true);
                     editor.apply();

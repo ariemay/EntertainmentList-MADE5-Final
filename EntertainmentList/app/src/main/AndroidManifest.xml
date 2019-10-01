@@ -9,8 +9,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="28" />
-
     <permission
         android:name="com.ariemay.entertainmentlistmade3.READ_DATABASE"
         android:protectionLevel="normal" />
@@ -33,7 +31,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".views.SettingActivity" />
+        <activity android:name=".views.SettingActivity"/>
         <activity android:name=".views.TvFavorite" />
         <activity android:name=".views.MoviesFavorite" />
         <activity android:name=".views.FavoriteActivity" />
